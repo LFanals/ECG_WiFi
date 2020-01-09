@@ -22,8 +22,6 @@ Els pins d'I2C són el GPIO0 (data) i el GPIO2 (clock).
 S'encarrega de sol·licitar dades de freqüència cardíaca, connectar-se a una xarxa Wi-Fi i donar servei als client que se li connectin. Calcula la variància de les dades, que a la web s'anomena variabilitat.
 
 
-```
-
 ## Autors
 
 * **Llorenç Fanals Batllori** - *Desenvolupament* - [LFanals](https://github.com/LFanals)
