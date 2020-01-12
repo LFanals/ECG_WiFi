@@ -2,6 +2,7 @@
 ### Electrocardiògraf amb connectivitat Wi-Fi 
 
 Repositori que allotja el codi per l'electrocardiògraf amb connectivitat Wi-Fi que hem desenvolupat per l'assignatura d'Aplicacions industrials dels microprocessadors.
+També inclou la memòria del projecte, en format TeX.
 
 ## Resultats
 La portada i l'abstract:
