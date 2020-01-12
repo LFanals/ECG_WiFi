@@ -5,7 +5,6 @@ Repositori que allotja el codi per l'electrocardiògraf amb connectivitat Wi-Fi 
 També inclou la memòria del projecte, en format TeX, i el disseny de la placa de circuit imprès, fet en KiCAD.
 
 ## Resultats
-La web:
 
 <img src="https://drive.google.com/uc?export=view&id=1hwH6YIEUzncWyd3L917bixS2f2-p1eiy" width=100%>
 
