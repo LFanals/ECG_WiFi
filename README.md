@@ -2,7 +2,7 @@
 
 Repositori que allotja el codi per l'electrocardiògraf amb connectivitat Wi-Fi que hem desenvolupat per l'assignatura d'Aplicacions industrials dels microprocessadors.
 
-També inclou la memòria del projecte, en format TeX.
+També inclou la memòria del projecte, en format TeX, i el disseny de la placa de circuit imprès, fet en KiCAD.
 
 ## Resultats
 La portada i l'abstract:
@@ -12,8 +12,10 @@ La portada i l'abstract:
 
 
 ## Software
-Podeu baixar-vos els arxius i carregar-los a les seves respectives plaques.  
-Observeu la documentació adjunta per assegurar que les connexions que feu són correctes
+<p align="center">
+<img src="  https://drive.google.com/uc?export=view&id=1OwWSyZsfkwHrD8OPpXs3E0eJzi3jnsBT" align="center" width="100%" height="100%">
+</p>
+
 
 ### Arduino Nano
 Encarregada de mostrejar la senyal analògica que provés de l'AD8232. En segon pla s'encarrega de controlar l'anell de LEDs i de respondre a l'ESP8266 en cas de què s'hagi donat un nou pols.
