@@ -1,6 +1,8 @@
 # ECG_WiFi 
 
-Repositori que allotja el codi per l'electrocardiògraf amb connectivitat Wi-Fi que hem desenvolupat per l'assignatura d'Aplicacions industrials dels microprocessadors. Conté:
+Repositori que allotja el codi per l'electrocardiògraf amb connectivitat Wi-Fi que hem desenvolupat per l'assignatura d'Aplicacions industrials dels microprocessadors.
+
+Conté:
 
 * Codi Arduino Nano
 * Codi ESP-01
@@ -8,7 +10,6 @@ Repositori que allotja el codi per l'electrocardiògraf amb connectivitat Wi-Fi 
 * Arxius de la caixa: STL i editable amb SolidWorks
 * Memòria del projecte en PDF i originals en TeX.
 
-També inclou la memòria del projecte, en format TeX, i el disseny de la placa de circuit imprès, fet en KiCAD.
 
 ## Resultats
 
