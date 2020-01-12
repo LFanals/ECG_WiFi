@@ -1,5 +1,4 @@
-# ECG_WiFi
-### Electrocardiògraf amb connectivitat Wi-Fi 
+# ECG_WiFi - Electrocardiògraf amb connectivitat Wi-Fi  
 
 Repositori que allotja el codi per l'electrocardiògraf amb connectivitat Wi-Fi que hem desenvolupat per l'assignatura d'Aplicacions industrials dels microprocessadors.
 
