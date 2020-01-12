@@ -1,14 +1,15 @@
-# ECG_WiFi - Electrocardiògraf amb connectivitat Wi-Fi  
+# ECG_WiFi 
 
 Repositori que allotja el codi per l'electrocardiògraf amb connectivitat Wi-Fi que hem desenvolupat per l'assignatura d'Aplicacions industrials dels microprocessadors.
 
 També inclou la memòria del projecte, en format TeX, i el disseny de la placa de circuit imprès, fet en KiCAD.
 
 ## Resultats
-La portada i l'abstract:
-<p align="center">
-<img src="https://github.com/LFanals/Plantilla_TFG/blob/master/PLANTILLA_TFG/captures/Portada_2.png" align="center" width="100%" height="100%">
-</p>
+La web:
+
+<img src="https://drive.google.com/uc?export=view&id=1hwH6YIEUzncWyd3L917bixS2f2-p1eiy" width=100%>
+
+
 
 
 ## Hardware
