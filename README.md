@@ -4,10 +4,10 @@ Repositori que allotja el codi per l'electrocardiògraf amb connectivitat Wi-Fi 
 
 Conté:
 
-* Codi Arduino Nano
-* Codi ESP-01
-* Arxius de disseny del circuit imprès
-* Arxius de la caixa: STL i editable amb SolidWorks
+* Codi Arduino Nano.
+* Codi ESP-01.
+* Arxius de disseny del circuit imprès.
+* Arxius de la caixa: STL i editable amb SolidWorks.
 * Memòria del projecte en PDF i originals en TeX.
 
 
