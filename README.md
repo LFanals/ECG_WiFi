@@ -11,19 +11,22 @@ La portada i l'abstract:
 </p>
 
 
+## Hardware
+* Arduino Nano - Realitza la lectura de la senyal de l'ECG, fa els càlculs necessaris i respon per I2C a l'ESP-01.
+* ESP-01 - Emmagatzema dades, calcula la variància de les dades i mostra la web.
+* AD8232 - Amplifica la diferència de tensió entre dos elèctrodes i la referencia respecte un tercer elèctrode.
+* NeoPixel 16 LEDs - Anell de LEDs que indica de forma molt visual la freqüència cardíaca.
+* Pila 1,2V 2800mAh
+* Reguladors de tensió - Convertidor boost a 5V i regulador lineal de 5V a 3,3V.
+
+<img src="https://drive.google.com/uc?export=view&id=1OwWSyZsfkwHrD8OPpXs3E0eJzi3jnsBT" width="600">
+
 ## Software
-<p align="center">
-<img src="  https://drive.google.com/uc?export=view&id=1OwWSyZsfkwHrD8OPpXs3E0eJzi3jnsBT" align="center" width="100%" height="100%">
-</p>
+### Organigrama lògic de l'Arduino Nano
+<img src="https://drive.google.com/uc?export=view&id=18ilxempdVNSotkTA9mkRWEK1KUC6rwiT" width="500">
 
-
-### Arduino Nano
-Encarregada de mostrejar la senyal analògica que provés de l'AD8232. En segon pla s'encarrega de controlar l'anell de LEDs i de respondre a l'ESP8266 en cas de què s'hagi donat un nou pols.
-
-### ESP8266
-Hem fet servir una placa de desenvolupament que conté aquest integrat i té un total de 8 pins, se sol anomenar ESP-01.
-Els pins d'I2C són el GPIO0 (data) i el GPIO2 (clock).  
-S'encarrega de sol·licitar dades de freqüència cardíaca, connectar-se a una xarxa Wi-Fi i donar servei als client que se li connectin. Calcula la variància de les dades, que a la web s'anomena variabilitat.
+### Organigrama lògic de l'ESP-01
+<img src="https://drive.google.com/uc?export=view&id=1N8h_sPnpfsne39gnEx7M1gGLyZmYzbAA" width="300">
 
 
 ## Autors
