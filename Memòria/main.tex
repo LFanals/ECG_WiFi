@@ -1,0 +1,319 @@
+%Options > Configure Texmaker > Editor > Spelling Dictionary, per corrector en català
+
+\documentclass[11pt, a4paper]{report}
+\usepackage[a4paper,left=30mm,right=20mm,top=25mm,bottom=25mm]{geometry}
+\sloppy %per forçar el canvi de línia si la paraula supera el marge dret
+\usepackage[utf8]{inputenc}
+
+
+
+% Per utilitzar la font Helvetica (Arial)
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[scaled=1]{helvet}
+%\usepackage[helvet]{sfmath}
+%\everymath={\sf}
+%Equacions amb una font sans_serif, \mathrm{equació aquí, són les letres les que queden inclinades}
+%\usepackage{arev} % sans-serif math font
+%\usepackage{helvet} % sans-serif text font
+
+
+% Per comptar imatges enlloc de mostrar 1.1, 1.2...
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\counterwithout{equation}{chapter}
+
+\usepackage{graphicx}
+\graphicspath{{images/}} %directori amb les imatges que volem insertar
+\usepackage{float} %per forçar imatges amb H
+\usepackage[normalem]{ulem} %negreta múltiples línies
+%\usepackage{soul}
+
+\usepackage{caption}
+\captionsetup[figure]{labelfont={},name={Figura},labelsep=period}
+\captionsetup[table]{labelfont={},name={Taula},labelsep=period}
+
+
+\usepackage{subcaption}
+\usepackage{amsmath} %per fòrmules matemàtiques
+\usepackage[table]{xcolor} %per colors a les taules
+%\usepackage{circuitikz} %per circuits electrònics
+\usepackage{siunitx} %per les labels dels components
+\usepackage[american,cuteinductors,smartlabels]{circuitikz} %american/european
+\usepackage{tikz} %quadrícula
+\usepackage[a4paper, left=30mm, right=20mm, top=25mm, bottom=25mm]{geometry} %geometria de la pàgina, 25 però per ajustar bé
+\setlength{\headsep}{20pt}
+\setlength{\footskip}{25pt}
+%\usepackage[a4paper, width=150mm, top=25mm, bottom=25mm]{geometry} %geometria de la pàgina
+\usepackage{lipsum} %per generar dummy text
+\usepackage{xpatch} %per la distància entre títol i top
+
+%Capçaleres i peus de pàgina
+\usepackage{fancyhdr}
+%\pagestyle{fancy} %fancy, plain
+\fancypagestyle{plain}{
+  \fancyhf{}% Clear header/footer
+  \fancyhead[L]{\footnotesize{Electrocardiògraf amb connectivitat Wi-Fi}}
+  \fancyhead[R]{\footnotesize{Memòria}}
+  \fancyfoot[R]{\footnotesize{\thepage}}
+}
+\pagestyle{plain}% Set page style to plain.
+
+%\fancyhead{}
+%\fancyhead[LO,LE]{PROJECTES}
+%\fancyfoot{}
+%\fancyfoot[LE,RO]{\thepage} %número de la pàgina, a la dreta
+%\fancyfoot[LO, CE]{Capítol \thechapter} %nom del capítol, a l'esquerra
+%\fancyfoot[CO, CE]{\href{https://github.com/LFanals}{Llorenç Fanals Batllori}} %nom de l'autor, al centre
+% \renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+
+%Per tenir el nombre de pàgina a l'inici d'un capítol
+%\fancypagestyle{plain}{
+%\fancyhf{}
+%\renewcommand\headrulewidth{0pt}
+%\fancyfoot[R]{\thepage}
+%}
+
+%Per configurar el color dels links i referències
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true, %true si es volen links de colors
+    linkcolor=black,  %colors de les referències internes, blue
+    filecolor=magenta,      %magenta
+    urlcolor=[rgb]{0,0,0}, %Color dels links d'Internet, sobre 255=2^8-1=2^0+...+2^7, {0,0.5,1}
+}
+
+%Bibliografia
+\usepackage[backend=bibtex]{biblatex}
+\addbibresource{bibliography.bib}
+
+%Canviem el nom que hi ha per defecte als índex i altres, per passar-ho al català
+\renewcommand{\contentsname}{Índex}
+\renewcommand{\listfigurename}{Índex de figures}
+\renewcommand{\chaptername}{Capítol}
+\renewcommand{\appendixname}{Annex}
+\renewcommand{\listtablename}{Índex de taules}
+% \renewcommand{\figurename}{Figura} % ho tinc amb caption
+% \captionsetup[table]{name=Taula} % ho tinc amb caption
+
+\definecolor{color_quadricula}{HTML}{0066ff} %color per la quadrícula
+
+% Pels circuits
+%\usepackage[american]{circuitikz}
+\usetikzlibrary{calc}
+\ctikzset{bipoles/thickness=1}
+\ctikzset{bipoles/length=1.2cm}
+\ctikzset{bipoles/diode/height=.375}
+\ctikzset{bipoles/diode/width=.3}
+\ctikzset{tripoles/thyristor/height=.8}
+\ctikzset{tripoles/thyristor/width=1}
+\ctikzset{bipoles/vsourceam/height/.initial=.7}
+\ctikzset{bipoles/vsourceam/width/.initial=.7}
+\tikzstyle{every node}=[font=\small]
+\tikzstyle{every path}=[line width=0.8pt,line cap=round,line join=round]
+
+%Per insertar codi
+\usepackage{listings}
+\usepackage{color}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=none, %tb, none
+  language=Python,
+  aboveskip=5mm,
+  belowskip=5mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\normalsize\ttfamily}, %small
+  numbers=none, %left
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+  literate={á}{{\'a}}1 {é}{{\'e}}1 {ó}{{\'o}}1 {í}{{\'i}}1 {ú}{{\'u}}1  {à}{\`{a}}1 {è}{\`{e}}1  {ò}{\`{o}}1  {ï}{\"\i}1  {ç}{\c{c}}1  {ü}{{\"u}}1  {É}{{\'E}}1 ,  
+}
+
+
+%Per tenir el format de capítol correcte
+\usepackage{titlesec}
+
+\usepackage{etoolbox}
+%\usepackage{hyperref}
+
+%Per chapter
+\titlespacing*{\chapter}{0pt}{-25pt}{11pt} %Espaiat del títol de capítol amb els altres elements
+\titleformat{\chapter}[hang] %Per seguir escrivint darrera el número
+{\normalfont\fontsize{11}{15}\bfseries}{\thechapter.}{0.4em}{\MakeUppercase} %\fontsize{Tamany}{Espai múltiples línies}
+
+%Per secció
+\titlespacing*{\section}{0pt}{11pt}{11pt} %Espaiat del títol de capítol amb els altres elements
+\titleformat{\section}[hang] %Per seguir escrivint darrera el número
+{\normalfont\fontsize{11}{15}}{\thesection.}{0.4em}{\bfseries} %\fontsize{Tamany}{Espai múltiples línies}
+
+%Per subsecció
+\titlespacing*{\subsection}{0pt}{11pt}{11pt} %Espaiat del títol de capítol amb els altres elements
+\titleformat{\subsection}[hang] %Per seguir escrivint darrera el número
+{\normalfont\fontsize{11}{15}}{\thesubsection.}{0.4em}{} %\fontsize{Tamany}{Espai múltiples línies}
+
+%Per paràgraf
+\titlespacing*{\paragraph}{0pt}{0pt}{22pt} %Espaiat del títol de capítol amb els altres elements
+\titleformat{\paragraph}[hang] %Per seguir escrivint darrera el número
+{\normalfont\fontsize{11}{15}}{}{}{} %\fontsize{Tamany}{Espai múltiples línies}
+
+
+%Interlineat, 1.2*1.25=1.5
+\linespread{1.25}
+
+%Espaiat entre paràgrafs
+%\setlength{\parskip}{22pt}
+ 
+
+\makeatletter
+\def\tagform@#1{\maketag@@@{(\ignorespaces{Eq.~#1}\unskip)}}
+\makeatother
+
+
+
+%Per no tenir negreta a l'index
+\usepackage{etoolbox}% http://ctan.org/pkg/etoolbox
+\makeatletter
+\patchcmd{\l@chapter}{\bfseries}{}{}{}% \patchcmd{<cmd>}{<search>}{<replace>}{<success>}{<failure>}
+\makeatother
+
+%Per tenir punts a l'índex
+\makeatletter
+\renewcommand*\l@chapter{\@dottedtocline{0}{0em}{1.5em}}
+\makeatother
+
+%Per taula que adapta bé els espais
+\usepackage{tabularx}
+\usepackage{tabu} % http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/tabu/tabu.pdf
+\tabulinesep = 1mm
+\usepackage[font=footnotesize]{caption} %Captions de les figures més petites
+
+%Appendix
+\usepackage[]{appendix} %toc, page
+
+%Alinear al separador decimal amb espais
+\usepackage{setspace}
+\renewcommand*{\arraystretch}{1.25}
+
+%Per fer el símbol de grau celsius amb \textcelsius{}
+\usepackage{textcomp}
+
+
+\input{chapters/arduinoLanguage2.tex} 
+\lstdefinestyle{myArduino_negre}{
+  language=Arduino_negre,
+  basicstyle={\small\ttfamily}, %small
+%% make listing changes here %%
+}
+\input{chapters/arduinoLanguage.tex}
+\lstdefinestyle{myArduino}{
+  language=Arduino,
+  basicstyle={\small\ttfamily}, %small
+%% make listing changes here %%
+}
+
+
+
+
+
+% flowchart
+\usepackage{pstricks}
+\usepackage{pst-node,pst-3d}
+\usepackage{pst-blur}
+\definecolor{Pink}{rgb}{1.,0.75,0.8}
+
+
+\usepackage[LGRgreek]{mathastext} % per evitar tenir les equacions en cursiva
+
+%\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usetikzlibrary{shapes.geometric}
+
+\fboxrule=1pt%border thickness 
+
+%-------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+\pagenumbering{Roman}
+
+
+\input{titlepage}
+
+%\input{abstract}
+
+%\chapter*{Dedicacions}
+%Dedico aquest treball a -
+
+%\chapter*{Agraïments}
+%Vull agraïr a \\
+
+\cleardoublepage\pagenumbering{arabic}
+
+\begin{spacing}{2}
+\tableofcontents
+\end{spacing}
+%\listoffigures %No fa falta crec
+%\listoftables %No fa falta crec
+\begin{spacing}{1.5}
+
+
+
+
+\input{chapters/Introduccio}
+
+\input{chapters/Teoria}
+%\input{chapters/Generador_fotovoltaic}
+%\input{chapters/Inversor}
+%\input{chapters/Instalacio_electrica}
+%\input{chapters/Quadre_electric}
+
+\input{chapters/Placa_electronica}
+%\input{chapters/Caixa}
+\input{chapters/Programacio}
+%\input{chapters/Instalacio_electronica}
+
+
+%\input{chapters/n1_Resum_pressupost}
+\input{chapters/n2_Conclusio}
+%\input{chapters/n3_Relacio_documents}
+\input{chapters/n4_Bibliografia}
+\input{chapters/n5_Glossari}
+
+
+\appendix
+
+%\input{chapters/A.calculs}
+
+\end{spacing}
+\begin{spacing}{1}
+
+\input{chapters/B.programa}
+
+\begin{appendices}
+%\chapter{Títol de l'annex}
+
+%\input{chapters/annex_calculs}
+%\input{chapters/appendix}
+
+
+\end{appendices}
+
+
+\end{spacing}
+%\cite{einstein} % per fer una cita
+%\printbibliography[title=Bibliografia] %ARA BÉ
+
+\end{document}

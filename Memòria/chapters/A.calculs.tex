@@ -1,0 +1,140 @@
+\chapter{\uppercase{Càlculs}}
+%\section{Càlculs línies elèctriques}
+Per tal de calcular les seccions mínimes de les línies es té en compte la caiguda de tensió i la intensitat màxima admissible dels cables. El REBT indica a la ITC-BT-40 que els cables de connexió hauran d'estar dimensionats per una intensitat no inferior al 125\% de la intensitat màxima del generador. A més, la caiguda de tensió màxima permesa entre el generador i el punt d'interconnexió amb la xarxa és de 1,5\% respecte la tensió nominal.\\
+\newline Recordar que les línies de connexió entre els panells solars, amb l'inversor i a la placa electrònica es té una senyal elèctrica de tipus continu. La línia que connecta la sortida de l'inversor amb la instal·lació interior és de senyal alterna, i es considera que amb un factor de potència unitari. El fabricant indica que el factor de potència de l'inversor escollit és sempre molt proper a la unitat.\\
+\newline Per calcular la intensitat de les línies monofàsiques es fa servir l'Equació \ref{eq:il}:
+\begin{equation} \label{eq:il}
+I_{linia} = \frac{P}{V*\cos(\phi)}
+\end{equation}
+V = 230 V.\\
+P: potència que consumeixen els elements connectats a la línia (W).\\
+$\phi$: factor de potència.\\
+\newline En monofàsic cal fer servir l'Equació \ref{eq:e}:
+\begin{equation}\label{eq:e}
+e(\%)=\frac{P}{V}\frac{2*l}{k*S}
+\end{equation}
+l: longitud ja sigui de la fase o el neutre des del comptador a l'element més llunyà (m).\\
+$k = 56 m/mm^{2}\si{\ohm}$.\\
+S:secció del cable (m$m^2$).\\
+%
+\newline El dimensionament de les línies ha de permetre que les caigudes de tensió no superin els màxims indicats prèviament. Alhora, els cables han de poder admetre les intensitats calculades, per això ens guiem amb la taula de la ITC-19 del REBT. Finalment, cal comprovar que  l'interruptor magnetotèrmic té una intensitat nominal superior a la calculada per la línia i menor a l'admissible que marca la ITC-19.\\
+\newline S'ha de tenir en compte el factor de correcció per radiació directa del Sol ($F_{sol}$), tal i com es comenta a la ITC-BT-06. S'escull un factor per radiació directa del Sol de 0,9.\\
+\newline També s'ha de tenir en compte el factor de correcció per agrupament de cables ($F_{grup}$) de 0,89 per parelles de cables i de 0,75 per l'agrupament de cables que va a la placa electrònica, tal com marca la ITC-BT-06 que tracta sobre instal·lacions aèries.\\
+\newline Finalment, el tercer factor és el factor de correcció per temperatura ($F_{temp}$), que s'escull de 0,9, que és el factor que s'ha d'agafar segons la ITC-BT-06 per temperatures de 50 $^\circ$C.\\
+%
+%
+%
+%
+\newline Per totes les línies menys per la de connexionat la placa electrònica es té en compte un factor de 1,25, tal com marca la ITC-BT-19 per generadors. La caiguda de tensió no pot ser major de l'1,5\% respecte la tensió nominal.\\
+\newline Es decideix instal·lar cables de recobriment de PVC sobre paret, muntatge C6.\\
+%
+\newline Amb aquests factors coneguts es pot calcular la intensitat de càlcul de les diferents línies, a partir de la qual es determinen les seccions.\\
+\newline La intensitat de curtcircuit augmenta amb la temperatura un 0,055\% per grau centígrad. Es calcula a 70 C$^{\circ}$ la intensitat de curtcircuit en condicions de 1.000 W/$m^2$. La que facilita el fabricant és de 9,33 A a 25 C$^{\circ}$.\\
+\newline Per conèixer la intensitat màxima de curtcircuit, en el cas més desfavorable, cal seguir l'Equació \ref{eq:isc}:
+\begin{equation} \label{eq:isc}
+I_{sc}(T=70\  C ^{\circ})= I_{sc} (1 + \alpha (T-25 \ C^{\circ}))
+\end{equation}
+
+\noindent $I_{sc}$: intensitat de curtcircuit del panell a 25 C$^{\circ}$ (A).\\
+$\alpha$: factor lineal d'increment d'intensitat de curtcircuit per efecte de la temperatura (\%).\\
+T: temperatura, en aquest cas 70 C$^{\circ}$.\\
+\noindent El resultat és de 9,56 A.\\
+%
+\newline Per calcular la tensió màxima de circuit obert s'ha fet servir l'Equació \ref{eq:isc}:
+\begin{equation} \label{eq:isc}
+V_{oc}(T=-10\  C ^{\circ})= V_{oc} (1 + \beta (T-25 \ C^{\circ}))
+\end{equation}
+\noindent  $V_{oc}$: Tensió de circuit obert a 25 C$^{\circ}$ (V).\\
+$\beta$: factor lineal de decrement de tensió de circuit obert per efecte de la temperatura (\%).\\
+%
+\newline La tensió de circuit obert a 25 C$^{\circ}$ és de 46,2 V. El factor lineal que indica el fabricant és de -0,32\%/C$^{\circ}$, que dona un total de 51,37 V. S'han tingut en compte pel dimensionament de la placa electrònica.\\
+\newline Dit això, per calcular les seccions dels cables cal destacar que el producte de la intensitat de curtcircuit calculada per la temperatura més desfavorable multiplicada per 1,25 ha de ser igual a la secció del REBT multiplicada pels factors de radiació solar, agrupament i temperatura.\\
+\newline Si s'aïlla, es pot dir que la intensitat de curtcircuit calculada multiplicada per 1,25 i dividida pels factors mencionats ha de ser admesa per les seccions dels cables del REBT.\\
+\newline A la Taula \ref{tab:taulax} es detalla la intensitat de cada línia i els factors que cal tenir en compte.
+
+\begin{table}[H]
+\scriptsize
+  \centering
+    \begin{tabu} to \textwidth  {|X[0.3, l]|X[2, l]|X[0.5, r]|X[0.6, r]|X[0.5, r]|X[0.5, r]|X[0.5, r]|} \hline
+Línia &  Descripció & Intensitat (A) & Factor generador & Factor radiació solar & Factor agrupament  & Factor temperatura\\ \hline \hline
+L1 & Connexionat entre els panells solars & 9,56 & 1,25 & 0,9 & 0,89 & 0,9 \\ \hline
+L2 & Connexionat de la branca 1 a l'inversor & 9,56 & 1,25 & 0,9 & 0,89 & 0,9\\ \hline
+L3 & Connexionat de la branca 2 a l'inversor & 9,56 & 1,25 & 0,9 & 0,89 & 0,9\\ \hline
+L4 & Connexionat de l'inversor al QGPC & 14,3 & 1,25 & 1,0 & 1,00 & 1,0 \\ \hline \hline
+L5 & Línies de connexionat dels panells fotovoltaics a la placa electrònica & 0,0023 & 1,00 & 0,9 & 0,75 & 0,9 \\ \hline
+	
+    \end{tabu}%
+  \caption{Intensitat de càlcul pel dimensionament de les línies}
+    \label{tab:taulax}%
+ \end{table}%
+
+\noindent Amb aquesta intensitat de càlcul podem dimensionar les línies. Es calculen les seccions per tal d'evitar tenir un percentatge de caiguda de tensió entre els generadors i el punt de connexió a la xarxa superior de 1,5\%, tal com marca la ITC-BT-40 de generadors.\\
+\newline A la Taula \ref{tab:t2} es mostren dades de les diverses línies detallades.\\
+\newline L'inversor sempre intenta donar els 230 V a la seva sortida, sempre que el valor de l'entrada superi els 80 V mínims que marca el fabricant. S'ha acumulat la caiguda de tensió de la línia 1 amb la línia 2 i la 3; i la més desfavorable entre la 2 i la 3 amb la 4. La ITC-BT-19 verifica que per intensitats admissibles les seccions són correctes.
+%
+\begin{table}[H]
+\scriptsize
+\begin{center}
+ \begin{tabu} to 0.985\textwidth {|X[0.5, l]|X[1.5, l]|X[0.8, r]|X[0.6, r]|X[r]|X[r]|X[r]|X[r]|X[r]|X[r]|X[0.5,r]|}%{X | c c c} 
+ \hline
+ Línia& Descripció & Potència (W) & cos($\phi$) & Intensitat nominal (A) & Distància màxima (m) & Seccions ($mm^{2}$) & Diàmetre tub (mm) & Caiguda de tensió (\%) & Caiguda de tensió acum. (\%)\\
+ \hline \hline 
+
+L1 & Connexionat entre els panells solars & 1.650 & 1 & 9,56 & 10 & 2x4 & 20 & 0,42 & 0,42 \\ \hline
+L2 & Connexionat de la branca 1 a l'inversor & 1.650  & 1 & 9,56  & 30 & 2x10 & 20 & 0,50 & 0,92 \\ \hline 
+L3 & Connexionat de la branca 2 a l'inversor & 1.650  & 1 & 9,56  & 19 & 2x6 & 25 & 0,53 & 0,95 \\ \hline 
+L4 & Connexionat de l'inversor al QGPC & 3.300  & 1 & 14,35 & 6 & 2x4 + 4 & 25 & 0,38 & 1,33 \\ \hline \hline
+L5 & Línies de connexionat dels panells fotovoltaics a la placa electrònica & 0,529 & 1 & 0,0038& 21 & 2x1,5 & 32 & 0,000575 & 0,000575 \\ \hline 
+
+
+ \end{tabu}
+ \caption{Línies detallades}
+ \label{tab:t2}%
+\end{center}
+\end{table}
+
+ 
+ 
+%
+%
+
+
+
+
+%\section{Càlculs placa electrònica}
+% o hauria de dir instrumentació?
+
+
+
+\clearpage
+
+
+% Table generated by Excel2LaTeX from sheet 'Hoja1'
+%\begin{table}[H]
+%  \centering
+%    \begin{tabularx} {\textwidth} {|X|r|} \hline
+%  \multicolumn{1}{|c|}{Descripció} &  \multicolumn{1}{c|}{Quantitat}\\ \hline \hline
+%
+ %   Placa GLC 330 W & 10 \\ \hline
+%    Inversor FRONIUS Primo 3.0-1 Light 3kW & 1 \\ \hline
+%    Metres cable Ethernet RJ-45 CAT 8 & 10 \\ \hline
+%    Metres cable 4 m$m^2$ PVC & 45 \\ \hline
+ %   Metres cable 1,5 m$m^2$ PVC & 100 \\ \hline
+ %   Punteres Enghofer E 4-10, 4 m$m^2$, 10 mm & 20 \\ \hline
+ %   Punteres Enghofer E 1.5-10 1,5 m$m^2$ 10 mm & 12 \\ \hline
+ %   Cinta aïllant 10 m 1,6 cm & 3 \\ \hline
+ %   Caixa estanca Solera CONS 100x100x55 mm & 2 \\ \hline
+  %  Canal Euroquint 25,16 mm 1,5 metres & 20 \\ \hline
+%    Curva canal VECAMCO & 10 \\ \hline
+%    Paquet de 50 brides 200x2,6  mm & 2 \\ \hline
+%    Regleta nylon 12 pols 16 mm & 4 \\ \hline
+%    Premsaestopes M12 & 10 \\ \hline
+%    Cargol autoroscant M4 16 mm & 12 \\ \hline
+%    Tacs Fischer 072095 nylon 6x50 mm & 50 \\ \hline
+%    Díode SM74611KTTR & 10 \\ \hline
+%            Hores enginyer & 1 \\ \hline
+%    Hores oficial de primera & 12 \\ \hline
+%    Hores oficial de segona & 12 \\ \hline
+%    \end{tabularx}%
+%  \label{tab:addlabel}%
+% \end{table}%

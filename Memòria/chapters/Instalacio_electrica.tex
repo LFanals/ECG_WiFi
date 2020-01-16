@@ -1,0 +1,150 @@
+\chapter{\uppercase{Instal·lació elèctrica}}
+És d'especial importància dimensionar correctament la instal·lació elèctrica dels panells fotovoltaics per tal de complir amb la ITC-BT-40 que tracta sobre instal·lacions generadores de baixa tensió. A més, cal protegir les línies amb les proteccions adients per tal d'evitar malmetre la instal·lació.
+
+\section{Línies elèctriques de la instal·lació fotovoltaica}
+La instal·lació elèctrica de la casa s'acull al model d'autoconsum amb compensació d'excedents. Això vol dir que els excedents d'energia, que es lliuren a la xarxa, es paguen a un preu menor al preu de l'energia que consumeix l'habitatge de la xarxa elèctrica. En cap cas, però, el client rebrà diners a cap de mes.\\
+\newline A continuació, a la Taula \ref{tab:linies}, s'exposen les diferents línies de què disposa la instal·lació i la longitud més gran de cadascuna. Recordem que a l'inversor li arriben dos parells de cables, cada parell és d'una branca de 5 panells fotovoltaics en sèrie amb els seus díodes com a protecció.
+
+\begin{table}[H]
+\small
+  \centering
+    \begin{tabular} {|l|l|r|} \hline
+  \multicolumn{1}{|l|}{Línia} &  \multicolumn{1}{l|}{Descripció} & \multicolumn{1}{c|}{Longitud (m)} \\ \hline \hline
+L1 & Connexionat entre els panells solars & 10 \\ \hline
+L2 & Connexionat de la branca 1 a l'inversor & 30 \\ \hline
+L3 & Connexionat de la branca 2 a l'inversor & 19 \\ \hline
+L4 & Connexionat de l'inversor al QGPC & 6 \\ \hline
+L5 & Connexionat dels panells fotovoltaics a la placa electrònica & 21 \\ \hline
+	
+    \end{tabular}%
+  \label{tab:addlabel}%
+  \caption{Línies de la instal·lació fotovoltaica}
+  \label{tab:linies}
+ \end{table}%
+
+\noindent La línia de connexionat entre els panells està formada per cables de baixa longitud que sumen els metres indicats a la taula. Hi ha una línia de connexionat dels panells a l'inversor per cada branca. Aquestes línies estan formades per un parell de cables de longituds diferents, i que sumen l'indicat a la taula. La connexió de l'inversor al QGPC es fa amb un parell de cables de la mateix longitud. Hi ha múltiples línies de connexionat dels panells fotovoltaics a la placa electrònica, la línia més llarga té la longitud indicada.\\
+\newline Totes les línies són de cables flexibles de coure amb recobriment no propagador d'incendis i opacitat reduïda. Les línies 1, 2 i 4 tenen conductors amb recobriment contra la radiació directa del Sol. La línia 3 usa un cable comú amb recobriment PVC.
+
+
+\section{Secció dels conductors}
+%revisar tubs
+Les seccions dels conductors estan calculades per complir amb el REBT. Es detallen els càlculs a l'annex de càlculs. Les seccions proposades es mostren a la Taula \ref{tab:eccions}.
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[0.4, l]|X[2, l]|X[0.8, r]|X[0.6 , r]|X[0.6 , r]|}%{X | c c c} 
+ \hline
+ Línia & Descripció & Distància màxima (m) & Seccions ($mm^{2}$) & Diàmetre tub (mm)\\
+ \hline \hline 
+
+L1 & Connexionat entre els panells solars &  10 & 2x4 & 16 \\ \hline
+L2 & Connexionat de la branca 1 a l'inversor & 30 & 2x10 & 20 \\ \hline 
+L3 & Connexionat de la branca 2 a l'inversor  & 19 & 2x6 & 16 \\ \hline 
+L4 & Connexionat de l'inversor al QGPC  & 6 & 2x4 + 4 & 25 \\ \hline
+L5 & Connexionat dels panells fotovoltaics a la placa electrònica & 21 & 2x1,5 & 32 \\ \hline 
+
+ \end{tabu}
+ \caption{Seccions de les línies}
+ \label{tab:eccions}
+\end{center}
+\end{table}
+
+%detallar
+
+\section{Quadre elèctric}
+El quadre elèctric de la instal·lació fotovoltaica es troba a l'habitació on hi ha l'inversor i la placa electrònica. Aquesta habitació està situada sota teulada. Al pis de sota, a la planta baixa, hi ha el QGPC.\\
+\newline La caixa del petit quadre elèctric que s'instal·larà és el model VE106F, amb un grau IP65.\\
+\newline La protecció contra sobreintensitats, situada a la sortida de l'inversor, es mostra a la Taula \ref{tab:sobrei}. S'ha calculat a partir de la tensió de sortida de l'inversor, que és de 230 V, i amb la potència màxima de la instal·lació fotovoltaica, de 3.300 W.
+
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[0.4, l]|X[2, l]|X[0.8, r]|X[0.7 , r]|X[0.4 , r]|X[0.4 , r]|}%{X | c c c} 
+ \hline
+ Línia & Descripció & Intensitat màxima de la línia (A) & Intensitat nominal del PIA (A) & Classe & Pols\\
+ \hline \hline 
+
+% L1 & Connexionat entre els panells solars &  10,91 & 16 & C & 2 \\ \hline
+
+L4 & Connexionat de l'inversor al QGPC  & 14,35 & 16 & C & 2 \\ \hline
+
+ \end{tabu}
+ \caption{Proteccions contra sobreintensitats}
+ \label{tab:sobrei}
+\end{center}
+\end{table}
+%
+%
+\noindent És necessari disposar d'algun interruptor per obrir els circuits dels panells solars. Es decideix fer-ho amb interruptors magnetotèrmics. La seva intensitat és superior a la de curtcircuit de les plaques. No cal protegir els panells solars contra sobreintensitats, en curtcircuit el seu màxim no supera els 10 A. Els conductors s'han dimensionat per aguantar aquesta intensitat de curtcircuit sense problemes. Els interruptors són els de la Taula \ref{tab:sobrei2}.
+%
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[0.4, l]|X[2, l]|X[0.8, r]|X[0.7 , r]|X[0.4 , r]|X[0.4 , r]|}%{X | c c c} 
+ \hline
+ Línia & Descripció & Intensitat màxima de la línia (A) & Intensitat nominal del PIA (A) & Classe & Pols\\
+ \hline \hline 
+L2 & Connexionat de la branca 1 a l'inversor & 9,56 & 16 & C & 2 \\ \hline 
+L3 & Connexionat de la branca 2 a l'inversor  & 9,56 & 16 & C & 2 \\ \hline 
+
+ \end{tabu}
+ \caption{Interruptors}
+ \label{tab:sobrei2}
+\end{center}
+\end{table}
+
+
+%revisar
+\noindent El dimensionament dels conductors es detalla a l'annex de càlculs, on es tenen en compte els factors de radiació, agrupament, escalfament i el factor de 1,25 que indica la ITC-BT-40. També es té en compte l'efecte de la temperatura sobre les variables dels panells.\\
+\newline La protecció contra contactes indirectes ve donada per un diferencial de classe A de 30 mA de sensibilitat, situat a la sortida de l'inversor. Altres característiques s'indiquen a la Taula \ref{tab:ind}.
+%
+
+\begin{table}[H]
+\small
+\begin{center}
+ \begin{tabu} to \textwidth {|X[0.3, l]|X[1, l]|X[0.8, r]|X[0.7 , r]|X[0.7 , r]|X[0.4 , r]|}%{X | c c c} 
+ \hline
+ Línia & Descripció & Intensitat nominal de la línia (A) & Sensibilitat (mA) & Intensitat nominal del diferencial (A) & Classe\\ \hline \hline 
+
+L4 & Connexionat de l'inversor al QGPC  & 14,35 & 30 & 40 & A \\ \hline
+
+ \end{tabu}
+ \caption{Proteccions contra contactes indirectes}
+ \label{tab:ind}
+\end{center}
+\end{table}
+
+\noindent Totes les carcasses de les plaques solars, que són metàl·liques, han d'estar connectades al terra de la instal·lació elèctrica de la casa. La resistència de terra es considerarà correcta si la tensió de defecte en qualsevol punt de la casa és menor a 24 V.
+
+\clearpage
+
+
+% Table generated by Excel2LaTeX from sheet 'Hoja1'
+%\begin{table}[H]
+%  \centering
+%    \begin{tabularx} {\textwidth} {|X|r|} \hline
+%  \multicolumn{1}{|c|}{Descripció} &  \multicolumn{1}{c|}{Quantitat}\\ \hline \hline
+%
+ %   Placa GLC 330 W & 10 \\ \hline
+%    Inversor FRONIUS Primo 3.0-1 Light 3kW & 1 \\ \hline
+%    Metres cable Ethernet RJ-45 CAT 8 & 10 \\ \hline
+%    Metres cable 4 m$m^2$ PVC & 45 \\ \hline
+ %   Metres cable 1,5 m$m^2$ PVC & 100 \\ \hline
+ %   Punteres Enghofer E 4-10, 4 m$m^2$, 10 mm & 20 \\ \hline
+ %   Punteres Enghofer E 1.5-10 1,5 m$m^2$ 10 mm & 12 \\ \hline
+ %   Cinta aïllant 10 m 1,6 cm & 3 \\ \hline
+ %   Caixa estanca Solera CONS 100x100x55 mm & 2 \\ \hline
+  %  Canal Euroquint 25,16 mm 1,5 metres & 20 \\ \hline
+%    Curva canal VECAMCO & 10 \\ \hline
+%    Paquet de 50 brides 200x2,6  mm & 2 \\ \hline
+%    Regleta nylon 12 pols 16 mm & 4 \\ \hline
+%    Premsaestopes M12 & 10 \\ \hline
+%    Cargol autoroscant M4 16 mm & 12 \\ \hline
+%    Tacs Fischer 072095 nylon 6x50 mm & 50 \\ \hline
+%    Díode SM74611KTTR & 10 \\ \hline
+%            Hores enginyer & 1 \\ \hline
+%    Hores oficial de primera & 12 \\ \hline
+%    Hores oficial de segona & 12 \\ \hline
+%    \end{tabularx}%
+%  \label{tab:addlabel}%
+% \end{table}%

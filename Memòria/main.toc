@@ -1,0 +1,27 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\contentsline {chapter}{\numberline {1}\uppercase {Introducci\IeC {\'o}}}{2}{chapter.1}% 
+\contentsline {section}{\numberline {1.1}Antecedents}{2}{section.1.1}% 
+\contentsline {section}{\numberline {1.2}Objectiu}{2}{section.1.2}% 
+\contentsline {section}{\numberline {1.3}Abast}{2}{section.1.3}% 
+\contentsline {chapter}{\numberline {2}\uppercase {Funcionament del cor hum\IeC {\`a} i monitoritzaci\IeC {\'o}}}{3}{chapter.2}% 
+\contentsline {section}{\numberline {2.1}Electrocardiograma}{3}{section.2.1}% 
+\contentsline {section}{\numberline {2.2}Rang de freq\IeC {\"u}\IeC {\`e}ncia card\IeC {\'\i }aca habitual}{4}{section.2.2}% 
+\contentsline {section}{\numberline {2.3}Electrocardi\IeC {\`o}grafs actuals i soluci\IeC {\'o} proposada}{5}{section.2.3}% 
+\contentsline {chapter}{\numberline {3}\uppercase {Placa electr\IeC {\`o}nica d'adquisici\IeC {\'o} de dades i comunicaci\IeC {\'o}}}{8}{chapter.3}% 
+\contentsline {section}{\numberline {3.1}Alimentaci\IeC {\'o}}{9}{section.3.1}% 
+\contentsline {section}{\numberline {3.2}Instrumentaci\IeC {\'o}}{11}{section.3.2}% 
+\contentsline {section}{\numberline {3.3}Anell de LEDs}{12}{section.3.3}% 
+\contentsline {section}{\numberline {3.4}Comunicaci\IeC {\'o}}{13}{section.3.4}% 
+\contentsline {section}{\numberline {3.5}Circuit impr\IeC {\`e}s}{15}{section.3.5}% 
+\contentsline {chapter}{\numberline {4}\uppercase {Programaci\IeC {\'o}}}{18}{chapter.4}% 
+\contentsline {section}{\numberline {4.1}Organigrama Arduino Nano}{18}{section.4.1}% 
+\contentsline {section}{\numberline {4.2}Programaci\IeC {\'o} Arduino Nano}{19}{section.4.2}% 
+\contentsline {section}{\numberline {4.3}Organigrama placa Wi-Fi}{21}{section.4.3}% 
+\contentsline {section}{\numberline {4.4}Programaci\IeC {\'o} placa Wi-Fi}{22}{section.4.4}% 
+\contentsline {section}{\numberline {4.5}P\IeC {\`a}gina web}{24}{section.4.5}% 
+\contentsline {chapter}{\numberline {5}\uppercase {Conclusi\IeC {\'o}}}{27}{chapter.5}% 
+\contentsline {chapter}{\numberline {6}\uppercase {Bibliografia}}{28}{chapter.6}% 
+\contentsline {chapter}{\numberline {7}\uppercase {Glossari}}{29}{chapter.7}% 
+\contentsline {chapter}{\numberline {A}\uppercase {Programes}}{30}{appendix.A}% 
+\contentsline {section}{\numberline {A.1}Programa Arduino Nano}{30}{section.A.1}% 
+\contentsline {section}{\numberline {A.2}Programa ESP-01}{33}{section.A.2}% 

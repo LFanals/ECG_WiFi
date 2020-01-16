@@ -1,0 +1,134 @@
+\chapter{\uppercase{Característiques de l'habitatge}}
+L'habitatge unifamiliar en què es preveu instal·lar les plaques solars es troba al municipi de Vulpellac, al carrer Canigó número 27. La casa té dues plantes i una superfície de 208 $m^2$ per planta. Les coordenades de l'habitatge són 41$^\circ$57'56'' N, 3$^\circ$02'47''. \\
+\newline La parcel·la disposa d'un jardí a la part posterior de la casa. La casa té una separació de 2 m a banda i banda respecte altres cases, les quals són un metre i mig més altes que la casa del número 27.\\
+% Es generen ombres puntuals en certs moments del dia i en certs punts de la teulada.
+\newline Hi ha arbres alts i bastants propers que generen ombres.\\
+\newline Per tal de determinar la potència màxima de la instal·lació fotovoltaica és necessari conèixer l'angle d'inclinació dels panells, la irradiació anual i les possibles ombres que poden haver-hi. D'aquesta manera se sap de forma bastant precisa l'energia que incideix al panell.\\
+\newline Si es coneix el consum anual de l'habitatge i es té en compte que els panells tenen un rendiment indicat pel fabricant es pot calcular quantes plaques solars són necessàries per igualar el consum amb la generació.\\
+%\newline Després d'exposar-ho al client, aquest ha acceptat el plantejament.
+
+\section{Irradiació}
+
+La teulada de la casa és quasi plana i per tant és relativament fàcil donar als panells fotovoltaics la inclinació i l'orientació que es desitgi. Per tal de calcular l'angle d'inclinació òptim es fa servir l'Equació \ref{beta}.
+\begin{equation} \label{beta}
+\beta_{opt}=3,7 + 0,69*|\phi|
+\end{equation}
+
+\noindent $\beta_{opt}$: angle d'inclinació òptima ($^\circ$).\\
+$\phi$: latitud de l'emplaçament geogràfic del es plaques, en valor absolut ($^\circ$).\\
+%
+\newline Coneixent que la latitud és de 41,97$^\circ$, l'angle òptim d'inclinació que ens donaria la màxima energia al cap de l'any és de 32,66$^\circ$.\\
+\newline Aquest càlcul no està gaire lluny de l'aproximació que a la realitat se sol fer, i que es detalla a la Taula \ref{tab:aprox_angle}.
+\begin{table}[H]
+  \small
+  \centering
+    \begin{tabularx} {\textwidth} {|X|l|l|r|} 
+ \hline  \multicolumn{1}{|c|}{Tipus d'instal·lació} &  \multicolumn{1}{c|}{Ús} &  \multicolumn{1}{c|}{Màxima captació d'energia} &  \multicolumn{1}{c|}{Inclinació òptima}\\ \hline \hline
+Instal·lació connectada a la xarxa & Anual & Anual & $\beta_{opt}=\phi - 10^\circ$ \\ \hline
+Bombeig d'aigua & Anual & Estiu & $\beta_{opt}=\phi - 20^\circ$ \\ \hline
+Autòmats de consum anual constant & Anual & Període de menor radiació & $\beta_{opt}=\phi + 10^\circ$ \\ \hline
+
+    \end{tabularx}%
+\caption{Aproximació de la inclinació òptima dels panells}
+\label{tab:aprox_angle}
+\end{table}%
+
+\noindent Amb aquesta aproximació l'angle d'inclinació seria de 31,97$^\circ$, molt proper als 32,66$^\circ$.\\
+\newline Un cop conegut l'angle òptim és possible conèixer la irradiació global. Per fer el càlcul es necessita conèixer el valor mig anual de la irradiació global sobre una superfície amb la inclinació òptima. Aquest valor està tabulat segons la província.\\
+\newline La fórmula en qüestió és la de l'Equació \ref{ga}.
+\begin{equation} \label{ga}
+G_a(\beta_{opt})= \frac{G_a(0)}{1-4,46*10^{-4}*\beta_{opt}-1,19*10^{-4}*\beta^2_{opt}}
+\end{equation}
+
+\noindent $G_a(\beta_{opt})$: valor mig de la irradiació global en una superfície amb inclinació òptima (Kwh/$m^2$).\\
+$G_a(0)$: mitjana anual de la irradiació global horitzontal (kWh/$m^2$).\\
+$\beta_{opt}$: angle d'inclinació òptim del panell fotovoltaic ($^\circ$).\\
+%
+\newline Per la província de Girona, la irradiació mitjana diària sobre una superfície amb inclinació òptima és de 3,69 kWh/($m^2*dia)$. Si es considera que un any té 365,25 dies això són 1.347,77 kWh/$m^2$.\\ 
+\newline Es calcula que valor mig de la irradiació global amb els panells inclinats un angle de 32,66$^\circ$ és de 1.569,92 kWh/$m^2$.\\
+\newline Es considera que no hi ha problema per instal·lar els panells cap al sud i amb l'angle d'inclinació òptim.
+
+%\newline Les estances de la casa i les seves superfícies útils són les següents:
+%\begin{table}[H]
+%  \centering
+%    \begin{tabular}{|l|r|}
+% \hline  \multicolumn{1}{|c|}{Estança} &  \multicolumn{1}{c|}{Superfície ($m^2$)}\\ \hline \hline
+%	Rebedor & 12,44 \\ \hline
+%	Habitació de rentar & 14,57 \\ \hline
+%	Lavabo 1 & 14,75 \\ \hline
+%	Menjador & 59,72 \\ \hline
+%	Cuina & 57,41 \\ \hline
+%	Lavabo 2 & 18,69 \\ \hline
+%	Despatx & 28,61 \\ \hline
+%	Dormitori 1 & 19,77 \\ \hline
+%	Dormitori 2 & 19,65 \\ \hline
+%	Dormitori 3 & 20,63 \\ \hline
+%	Dormitori 4 & 20,70 \\ \hline
+%	Traster i electrònica per les plaques & 19,65 \\ \hline
+%    \end{tabular}%
+%    \caption{Estances de l'habitatge}
+%\caption{Estances de l'habitatge unifamiliar}
+%\end{table}%
+
+\section{Consum energètic}
+\noindent En aquesta casa hi viuen 6 persones. Els consums elèctrics de l'any 2018 han estat els que s'indiquen a continuació, a la Taula \ref{tab:consums}.
+
+\begin{table}[H]
+\small
+  \centering
+    \begin{tabular}{|l|r|r|r|} \hline
+    Mes   & \multicolumn{1}{|l}{Consum mensual (kWh)} & \multicolumn{1}{|l}{Nombre de dies} & \multicolumn{1}{|l|}{Consum mitjà diari (kWh/dia)} \\ \hline \hline
+    Gener & 493   & 31    & 15,90 \\ \hline
+    Febrer & 506   & 28    & 18,07 \\ \hline
+    Març  & 457   & 31    & 14,74 \\ \hline
+    Abril & 415   & 30    & 13,83 \\ \hline
+    Maig  & 406   & 31    & 13,10 \\ \hline
+    Juny  & 424   & 30    & 14,13 \\ \hline
+    Juliol & 502   & 31    & 16,19 \\ \hline
+    Agost & 521   & 31    & 16,81 \\ \hline
+    Setembre & 394   & 30    & 13,13 \\ \hline
+    Octubre & 416   & 31    & 13,42 \\ \hline
+    Novembre & 451   & 30    & 15,03 \\ \hline
+    Desembre & 519   & 31    & 16,74 \\ \hline
+    Total & 5.504 & 365   & 15,08 \\ \hline
+    \end{tabular}%
+  \label{tab:addlabel}%
+    \caption{Consums de l'habitatge}
+    \label{tab:consums}
+\end{table}%
+
+\noindent Els consums indicats són bastant elevats per tractar-se d'un habitatge, però s'ha de considerar que es tracta d'una casa amb dues plantes i un total de 306 $m^2$ de superfície útil. Hi viuen 6 persones la majoria d'èpoques de l'any i la calefacció és amb bombes de calor.\\
+\newline La casa està connectada a la xarxa elèctrica, es proposa la modalitat d'autoconsum amb excedents acollits a compensació, que és una modalitat vàlida segons el Decret d'Autoconsum.
+
+\clearpage
+
+
+% Table generated by Excel2LaTeX from sheet 'Hoja1'
+%\begin{table}[H]
+%  \centering
+%    \begin{tabularx} {\textwidth} {|X|r|} \hline
+%  \multicolumn{1}{|c|}{Descripció} &  \multicolumn{1}{c|}{Quantitat}\\ \hline \hline
+%
+ %   Placa GLC 330 W & 10 \\ \hline
+%    Inversor FRONIUS Primo 3.0-1 Light 3kW & 1 \\ \hline
+%    Metres cable Ethernet RJ-45 CAT 8 & 10 \\ \hline
+%    Metres cable 4 m$m^2$ PVC & 45 \\ \hline
+ %   Metres cable 1,5 m$m^2$ PVC & 100 \\ \hline
+ %   Punteres Enghofer E 4-10, 4 m$m^2$, 10 mm & 20 \\ \hline
+ %   Punteres Enghofer E 1.5-10 1,5 m$m^2$ 10 mm & 12 \\ \hline
+ %   Cinta aïllant 10 m 1,6 cm & 3 \\ \hline
+ %   Caixa estanca Solera CONS 100x100x55 mm & 2 \\ \hline
+  %  Canal Euroquint 25,16 mm 1,5 metres & 20 \\ \hline
+%    Curva canal VECAMCO & 10 \\ \hline
+%    Paquet de 50 brides 200x2,6  mm & 2 \\ \hline
+%    Regleta nylon 12 pols 16 mm & 4 \\ \hline
+%    Premsaestopes M12 & 10 \\ \hline
+%    Cargol autoroscant M4 16 mm & 12 \\ \hline
+%    Tacs Fischer 072095 nylon 6x50 mm & 50 \\ \hline
+%    Díode SM74611KTTR & 10 \\ \hline
+%            Hores enginyer & 1 \\ \hline
+%    Hores oficial de primera & 12 \\ \hline
+%    Hores oficial de segona & 12 \\ \hline
+%    \end{tabularx}%
+%  \label{tab:addlabel}%
+% \end{table}%
