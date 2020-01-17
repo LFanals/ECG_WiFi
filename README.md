@@ -53,4 +53,3 @@ El projecte està sota la llicència [LICENSE](LICENSE). Podeu baixar-vos i util
 ## Agraïments
 
 * [JLCPCB](https://jlcpcb.com/) per la seva gran qualitat al fabricar el PCB i la rapidesa a fer l'entrega.
-* Everyone that posted questions and answers on forums.
