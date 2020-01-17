@@ -13,6 +13,7 @@ Conté:
 
 ## Resultats
 
+<img src="https://drive.google.com/uc?export=view&id=11FMWBnEfO2eM9R5VtW1JbiUtnjxs2st9" width=100%>
 <img src="https://drive.google.com/uc?export=view&id=1hwH6YIEUzncWyd3L917bixS2f2-p1eiy" width=100%>
 
 ## Hardware
