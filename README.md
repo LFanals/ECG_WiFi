@@ -15,7 +15,6 @@ Conté:
 
 <img src="https://drive.google.com/uc?export=view&id=11FMWBnEfO2eM9R5VtW1JbiUtnjxs2st9" width=100%>
 <img src="https://drive.google.com/uc?export=view&id=1hwH6YIEUzncWyd3L917bixS2f2-p1eiy" width=100%>
-![image](https://drive.google.com/uc?export=view&id=1hwH6YIEUzncWyd3L917bixS2f2-p1eiy)
 
 ## Hardware
 * Arduino Nano - Realitza la lectura de la senyal de l'ECG, fa els càlculs necessaris i respon per I2C a l'ESP-01.
